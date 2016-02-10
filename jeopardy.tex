@@ -1,0 +1,216 @@
+\documentclass{beamer}
+\setbeamertemplate{navigation symbols}{}
+\setbeamersize{text margin left=0cm, text margin right=0cm}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins}
+\usepackage{ocgx}
+
+\usepackage{graphicx}
+
+\newtcolorbox{InnerSubjectBox}{
+    enhanced,
+    nobeforeafter,
+    arc=0pt,
+    width=.2\paperwidth,
+    boxrule=.4pt,
+    colframe=white,
+    center upper,
+    interior style={
+        top color=blue,
+        bottom color=black
+    },
+    colupper=white,
+}
+
+\newcommand{\subjects}[5]{×
+    \begin{InnerSubjectBox}
+        #1 Who am I?
+    \end{InnerSubjectBox}%
+    \begin{InnerSubjectBox}
+        #2
+    \end{InnerSubjectBox}%
+    \begin{InnerSubjectBox}
+        #3
+    \end{InnerSubjectBox}%
+    \begin{InnerSubjectBox}
+        #4
+    \end{InnerSubjectBox}%
+    \begin{InnerSubjectBox}
+        #5
+    \end{InnerSubjectBox}
+}
+
+\newtcolorbox{InnerPrizeBox}{
+    enhanced,
+    nobeforeafter,
+    arc=0pt,
+    width=.2\paperwidth,
+    boxrule=.4pt,
+    colframe=white,
+    center upper,
+    interior style={
+        top color=blue,
+        bottom color=black
+    },
+    colupper=white,
+    valign=center,
+    fontupper=\LARGE\bfseries,
+    height=.176\paperheight
+}
+
+\newcommand{\prizes}{%
+    \foreach \i in {1,2,...,5}{%
+        \begin{InnerPrizeBox}%
+            \begin{ocg}{s\i-100}{s\i-100}{1}{\hyperlink{s\i-100}{100}}\end{ocg}
+        \end{InnerPrizeBox}%
+    }%
+
+    \foreach \i in {1,2,...,5}{%
+        \begin{InnerPrizeBox}%
+            \begin{ocg}{s\i-200}{s\i-200}{1}{\hyperlink{s\i-200}{200}}\end{ocg}
+        \end{InnerPrizeBox}%
+    }%
+
+    \foreach \i in {1,2,...,5}{%
+        \begin{InnerPrizeBox}%
+            \begin{ocg}{s\i-300}{s\i-300}{1}{\hyperlink{s\i-300}{300}}\end{ocg}
+        \end{InnerPrizeBox}%
+    }%
+
+    \foreach \i in {1,2,...,5}{%
+        \begin{InnerPrizeBox}%
+            \begin{ocg}{s\i-400}{s\i-400}{1}{\hyperlink{s\i-400}{400}}\end{ocg}
+        \end{InnerPrizeBox}%
+    }%
+
+    \foreach \i in {1,2,...,5}{%
+        \begin{InnerPrizeBox}%
+            \begin{ocg}{s\i-500}{s\i-500}{1}{\hyperlink{s\i-500}{500}}\end{ocg}
+        \end{InnerPrizeBox}%
+    }%
+}
+
+\newtcolorbox{QuestionHeadFoot}[1][]{
+    enhanced,
+    before=\vskip-.7ex,
+    after=,
+    arc=0pt,
+    width=\paperwidth,
+    boxrule=.4pt,
+    colframe=white,
+    center upper,
+    center lower,
+    interior style={
+        top color=blue,
+        bottom color=black
+    },
+    colupper=white,
+    collower=white,
+    valign=center,
+    fontupper=\LARGE\bfseries,
+    fontlower=\LARGE\bfseries,
+    height=.176\paperheight,
+    sidebyside,
+    segmentation style={white,solid,line width=.4pt},
+    #1
+}
+
+\newcommand{\header}[2]{
+    \begin{QuestionHeadFoot}
+        Subject #1 \tcblower #2
+    \end{QuestionHeadFoot}
+}
+
+\newcommand{\footer}[1]{
+    \begin{QuestionHeadFoot}[before=\vskip-2.7ex]
+        \hyperlink{question#1}{Question} \\ \hyperlink{answer#1}{Answer} \tcblower
+        \hideocg{#1}{Done!} \\ \hyperlink{home}{Home}
+    \end{QuestionHeadFoot}
+}
+
+\newcommand{\content}[4]{
+    \begin{frame}
+        \hypertarget<1>{answer#1}{}
+        \hypertarget<2>{question#1}{}
+        \hypertarget{#1}{}
+        \header{#2}{#3}
+        #4
+        \footer{#1}
+    \end{frame}
+}
+
+\newtcolorbox{textarea}[1][]{
+    nobeforeafter,
+    height=6.2cm,
+    boxrule=0pt,
+    center upper,
+    valign=center,
+    #1
+}
+
+\begin{document}
+\begin{frame}
+    \hypertarget{home}{}
+    \vspace*{-.5cm}
+    \subjects{Subject 1}{Subject 2}{Subject 3}{Subject 4}{Subject 5}
+    \prizes
+\end{frame}
+
+\content                       % 4 arguments
+{s1-100}                     % question internal identifier
+{1}                          % subject number
+{100}{                       % question prize
+    \begin{textarea}[]         % question/answer content
+        \only<1>{                  % answer content
+            $6.28318530$
+        }
+        \only<2>{                  % question content
+            What is $2\pi$ ?
+        }
+    \end{textarea}
+}
+
+\content                       % 4 arguments
+{s1-200}                     % question internal identifier
+{1}                          % subject number
+{200}{                       % question prize
+    \begin{textarea}[]         % question/answer content
+        \only<1>{                  % answer content
+         \includegraphics[scale=0.2]{Vortex-street-1-90deg.jpg}
+        }
+        \only<2>{                  % question content
+            What is Karman Vortex Street ?
+        }
+    \end{textarea}
+}
+
+\content                       % 4 arguments
+{s1-300}                     % question internal identifier
+{1}                          % subject number
+{300}{                       % question prize
+    \begin{textarea}[]         % question/answer content
+        \only<1>{                  % answer content
+            $\frac{1+\sqrt{5}}{2}$
+        }
+        \only<2>{                  % question content
+            What is the golden ratio?
+        }
+    \end{textarea}
+}
+
+\content                       % 4 arguments
+{s1-400}                     % question internal identifier
+{1}                          % subject number
+{400}{                       % question prize
+    \begin{textarea}[]         % question/answer content
+        \only<1>{              
+        	    % answer content
+            $ 2.718281$
+        }
+        \only<2>{                  % question content
+            What is $e$ ?
+        }
+    \end{textarea}
+}
+\end{document}
+
