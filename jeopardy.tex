@@ -142,6 +142,28 @@
     \end{frame}
 }
 
+
+\newcommand{\footerdouble}[1]{
+    \begin{QuestionHeadFoot}[before=\vskip-2.7ex]
+        \hyperlink{question#1}{Question} \\
+        \hyperlink{answer#1}{Answer} \tcblower
+        \hideocg{#1}{Done!} \\
+        \hyperlink{home}{Home}
+    \end{QuestionHeadFoot}
+}
+
+\newcommand{\contentdouble}[4]{
+    \begin{frame}
+        \hypertarget<1>{double#1}{}
+        \hypertarget<3>{answer#1}{}
+        \hypertarget<2>{question#1}{}
+        \hypertarget{#1}{}
+        \header{#2}{#3}
+        #4
+        \footerdouble{#1}
+    \end{frame}
+}
+
 \newtcolorbox{textarea}[1][]{
     nobeforeafter,
     height=6.2cm,
@@ -187,13 +209,30 @@
     \end{textarea}
 }
 
-\content                       % 4 arguments
+% \content                       % 4 arguments
+% {s1-300}                     % question internal identifier
+% {1}                          % subject number
+% {300}{                       % question prize
+%     \begin{textarea}[]         % question/answer content
+%         \only<1>{                  % answer content
+%             $\frac{1+\sqrt{5}}{2}$
+%         }
+%         \only<2>{                  % question content
+%             What is the golden ratio?
+%         }
+%     \end{textarea}
+% }
+
+\contentdouble                       % 4 arguments
 {s1-300}                     % question internal identifier
 {1}                          % subject number
 {300}{                       % question prize
     \begin{textarea}[]         % question/answer content
-        \only<1>{                  % answer content
+        \only<1>{ DOUBLE JEOPARDY !!!!!! \\ Click on ANSWER !
+        }
+        \only<3>{                  % answer content
             $\frac{1+\sqrt{5}}{2}$
+            test
         }
         \only<2>{                  % question content
             What is the golden ratio?
@@ -201,12 +240,14 @@
     \end{textarea}
 }
 
+
+
 \content                       % 4 arguments
 {s1-400}                     % question internal identifier
 {1}                          % subject number
 {400}{                       % question prize
     \begin{textarea}[]         % question/answer content
-        \only<1>{              
+        \only<1>{
         	    % answer content
             $ 2.718281$
         }
@@ -216,4 +257,3 @@
     \end{textarea}
 }
 \end{document}
-
