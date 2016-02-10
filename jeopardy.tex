@@ -145,23 +145,27 @@
 
 \newcommand{\footerdouble}[1]{
     \begin{QuestionHeadFoot}[before=\vskip-2.7ex]
-        \hyperlink{question#1}{Question} \\
-        \hyperlink{answer#1}{Answer} \tcblower
+        \hyperlink{question#1}{\color{red}Question} \\
+        \hyperlink{answer#1}{\color{green}Answer} \tcblower
         \hideocg{#1}{Done!} \\
         \hyperlink{home}{Home}
     \end{QuestionHeadFoot}
 }
 
 \newcommand{\contentdouble}[4]{
+%
+	{
     \begin{frame}
         \hypertarget<1>{double#1}{}
         \hypertarget<3>{answer#1}{}
         \hypertarget<2>{question#1}{}
         \hypertarget{#1}{}
-        \header{#2}{#3}
+        \header{#2}{DOUBLE!!!!!}
         #4
+        
         \footerdouble{#1}
     \end{frame}
+}
 }
 
 \newtcolorbox{textarea}[1][]{
@@ -201,7 +205,7 @@
 {200}{                       % question prize
     \begin{textarea}[]         % question/answer content
         \only<1>{                  % answer content
-         \includegraphics[scale=0.2]{Vortex-street-1-90deg.jpg}
+         sdfsdfsdf
         }
         \only<2>{                  % question content
             What is Karman Vortex Street ?
@@ -228,8 +232,9 @@
 {1}                          % subject number
 {300}{                       % question prize
     \begin{textarea}[]         % question/answer content
-        \only<1>{ DOUBLE JEOPARDY !!!!!! \\ Click on ANSWER !
-        }
+        \only<1>{
+        		\includegraphics[scale=0.7]{categories/media/bonus.jpeg}
+        	}
         \only<3>{                  % answer content
             $\frac{1+\sqrt{5}}{2}$
             test
