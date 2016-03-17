@@ -1,0 +1,91 @@
+
+movies:
+    give quotes/images of IMBD http://www.imdb.com/search/keyword?keywords=mathematician
+    and ask for the movie title
+    21, beautiful mind, good will hunting, numb3rs, immitation game
+
+proofs:
+    give a proof and ask what is proven
+    sqrt 2 not in Q 
+    weak of large numbers
+    "the side of this page is too small for the proof" fermats last theorem
+    the gif for a^2+b^2=c^2 with water in the triangles
+
+
+people:
+    ask for people by images
+    gauss at DM bill
+    boltzmann
+    newton
+
+
+number:
+    give a number and ask what it is
+    e.g. 3.14159 but also (1+sqrt(5))/2
+    0.7 (what is 1/sqrt2)
+    avogardo 
+
+
+code:
+    quote matlab help and ask for the command
+    e.g. for "spy", "quiver" "randn"
+
+
+plots:
+    2 sinx
+    exp(z) with z in C
+    karman vortex street
+    brownian motion
+    heaviside functiond
+
+
+may the force be with you
+    welche kraft suchen wir: 
+        apfel fällt runter
+        das gif von dem basketball -> magnus effekt?
+
+bugs bugs bugs
+    irgendwas mit code und bugs?
+
+revision number
+    welche software suchen wir? bsp
+        95 98 2000 xp -> windows
+        14.04 14.10 15.04 .... ubutu
+        latex hat irgendwie was mit E oder PI und das konvergiert gegen die zahl
+        14 a 14b 15a 15b matlab
+        ubuntu: die namen 
+
+umformulieren von expedition / ereignissen
+    "if you put it that way.."
+    
+        armstrong und aldren gehen auf einen roadtrip mit einer rakete
+            was ist die mondlandung
+        columbus biegt mindestens mehr als einmal falsch ab
+            was ist die entdeckung von amerika
+        irgenwdas mit penicilin
+
+RWTH / Aachen
+
+
+abkürzungen 
+    light amplification by...
+    ie, eg, qed
+
+
+code bingo
+
+
+icons raten für software
+    firefox, crhome texmaker , ...
+
+
+
+whats your number
+    latest release
+
+video games
+    in this game, the main character is often wrongly given the namer of the princess he saves
+    
+    tetris: completing something erases it-- oder so
+
+
