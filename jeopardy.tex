@@ -143,15 +143,16 @@
 }
 
 % Command for setting up the footer of a question
-\newcommand{\footer}[1]{% 1 arg: Question/Answer ID ?
+\newcommand{\footer}[1]{% 1 arg: ocs content ID
     \begin{QuestionHeadFoot}[before=\vskip-2.7ex]
-        \hyperlink{question#1}{Question} \\ \hyperlink{answer#1}{Answer} \tcblower
-        \hideocg{#1}{Done!} \\ \hyperlink{home}{Home}
+        \hyperlink{question#1}{Solution}   %\\    \hyperlink{answer#1}{Answer}
+         \tcblower
+        \hideocg{#1}{Done!} \\ \hideocg{#1}{\hyperlink{home}{Home}}
     \end{QuestionHeadFoot}
 }
 
 % Command for setting up the Question and the answer
-\newcommand{\content}[4]{% 4 args: 1-buttonlinks link 2-categorynumber 3-price 4-text
+\newcommand{\content}[4]{% 4 args: 1-ocg content id 2-category 3-price 4-text
     \begin{frame}
         \hypertarget<1>{answer#1}{}
         \hypertarget<2>{question#1}{}
