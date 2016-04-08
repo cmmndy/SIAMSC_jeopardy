@@ -147,11 +147,11 @@
     \begin{QuestionHeadFoot}[before=\vskip-2.7ex]
         \hyperlink{question#1}{Solution}   %\\    \hyperlink{answer#1}{Answer}
          \tcblower
-        \hideocg{#1}{Done!} \\ \hideocg{#1}{\hyperlink{home}{Home}}
+        \hideocg{#1}{Done!} \\ \hyperlink{home}{Home}
     \end{QuestionHeadFoot}
 }
 
-% Command for setting up the Question and the answer
+% Command for setting up the question and answer content
 \newcommand{\content}[4]{% 4 args: 1-ocg content id 2-category 3-price 4-text
     \begin{frame}
         \hypertarget<1>{answer#1}{}
@@ -167,10 +167,9 @@
 % Command for setting up the footer of a DOUBLE question
 \newcommand{\footerdouble}[1]{
     \begin{QuestionHeadFoot}[before=\vskip-2.7ex]
-        \hyperlink{question#1}{\color{red}Question} \\
-        \hyperlink{answer#1}{\color{green}Answer} \tcblower
-        \hideocg{#1}{Done!} \\
-        \hyperlink{home}{Home}
+        \hyperlink{question#1}{Solution} %\\        \hyperlink{answer#1}{\color{green}Answer}
+        \tcblower
+        \hideocg{#1}{Done!} \\ \hyperlink{home}{Home}
     \end{QuestionHeadFoot}
 }
 
@@ -179,12 +178,11 @@
 	{
     \begin{frame}
         \hypertarget<1>{double#1}{}
-        \hypertarget<3>{answer#1}{}
-        \hypertarget<2>{question#1}{}
+        \hypertarget<2>{answer#1}{}
+        \hypertarget<3>{question#1}{}
         \hypertarget{#1}{}
-        \header{#2}{DOUBLE!!!!!}
+        \header{#2}{DOUBLE!!!}
         #4
-
         \footerdouble{#1}
     \end{frame}
   }
@@ -197,8 +195,16 @@
 \def \fourthcat {Cat 4}
 \def \fifthcat {Cat 5}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Define the picture for the DOUBLE Bonus here !!!
+\def \doublepic {\includegraphics[scale=0.7]{jeopardypics/Double_Jeopardy.png}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{frame}
 
 % Set up the HOME slide
 \begin{frame}
@@ -208,6 +214,10 @@
     \prizes
 \end{frame}
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Category 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \content                       % 4 arguments
 {s1-100}                     % question internal identifier
 {\firstcat}                          % category
@@ -236,19 +246,6 @@
     \end{textarea}
 }
 
-% \content                       % 4 arguments
-% {s1-300}                     % question internal identifier
-% {1}                          % subject number
-% {300}{                       % question prize
-%     \begin{textarea}[]         % question/answer content
-%         \only<1>{                  % answer content
-%             $\frac{1+\sqrt{5}}{2}$
-%         }
-%         \only<2>{                  % question content
-%             What is the golden ratio?
-%         }
-%     \end{textarea}
-% }
 
 \contentdouble                       % 4 arguments
 {s1-300}                     % question internal identifier
@@ -256,13 +253,13 @@
 {300}{                       % question prize
     \begin{textarea}[]         % question/answer content
         \only<1>{
-        		\includegraphics[scale=0.7]{categories/media/bonus.jpeg}
+        		\doublepic
         	}
-        \only<3>{                  % answer content
+        \only<2>{                  % answer content
             $\frac{1+\sqrt{5}}{2}$
             test
         }
-        \only<2>{                  % question content
+        \only<3>{                  % question content
             What is the golden ratio?
         }
     \end{textarea}
@@ -304,5 +301,17 @@
         }
     \end{textarea}
 }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Category 3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Category 4
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Category 5
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \end{document}
