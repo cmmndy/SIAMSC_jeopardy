@@ -1,15 +1,15 @@
 \documentclass{beamer}
-\setbeamertemplate{navigation symbols}{}
-\setbeamersize{text margin left=0cm, text margin right=0cm}
-\usepackage{tcolorbox}
-\tcbuselibrary{skins}
-\usepackage{ocgx}
 
+\usepackage{tcolorbox}
+\usepackage{ocgx}
 \usepackage{graphicx}
 
+\setbeamertemplate{navigation symbols}{}
+\setbeamersize{text margin left=0cm, text margin right=0cm}
+\tcbuselibrary{skins}
 
 
-
+% Define an evironment for one Subject Box based on tcolorbox
 \newtcolorbox{InnerSubjectBox}{
     enhanced,
     nobeforeafter,
@@ -25,9 +25,67 @@
     colupper=white,
 }
 
+% Define an environment for one Price Box based on tcolorbox
+\newtcolorbox{InnerPrizeBox}{
+    enhanced,
+    nobeforeafter,
+    arc=0pt,
+    width=.2\paperwidth,
+    boxrule=.4pt,
+    colframe=white,
+    center upper,
+    interior style={
+        top color=blue,
+        bottom color=black
+    },
+    colupper=yellow,
+    valign=center,
+    fontupper=\LARGE\bfseries,
+    height=.176\paperheight
+}
+
+% Define an environment for the Question Header and Footer
+\newtcolorbox{QuestionHeadFoot}[1][]{ % How many arguments?
+    enhanced,
+    before=\vskip-.7ex,
+    after=,
+    arc=0pt,
+    width=\paperwidth,
+    boxrule=.4pt,
+    colframe=white,
+    center upper,
+    center lower,
+    interior style={
+        top color=blue,
+        bottom color=black
+    },
+    colupper=yellow,
+    collower=yellow,
+    valign=center,
+    fontupper=\LARGE\bfseries,
+    fontlower=\LARGE\bfseries,
+    height=.176\paperheight,
+    sidebyside,
+    segmentation style={white,solid,line width=.4pt},
+    #1
+}
+
+
+% Define environment for the textarea, i.e. question and answer
+\newtcolorbox{textarea}[1][]{
+    nobeforeafter,
+    height=6.2cm,
+    boxrule=0pt,
+    center upper,
+    valign=center,
+    #1
+}
+
+
+% Command for setting up the subjects line
 \newcommand{\subjects}[5]{×
     \begin{InnerSubjectBox}
-        #1 Who am I?
+        #1
     \end{InnerSubjectBox}%
     \begin{InnerSubjectBox}
         #2
@@ -43,95 +101,57 @@
     \end{InnerSubjectBox}
 }
 
-\newtcolorbox{InnerPrizeBox}{
-    enhanced,
-    nobeforeafter,
-    arc=0pt,
-    width=.2\paperwidth,
-    boxrule=.4pt,
-    colframe=white,
-    center upper,
-    interior style={
-        top color=blue,
-        bottom color=black
-    },
-    colupper=white,
-    valign=center,
-    fontupper=\LARGE\bfseries,
-    height=.176\paperheight
-}
 
+% Command for setting up the price boxes
 \newcommand{\prizes}{%
-    \foreach \i in {1,2,...,5}{%
+    \foreach \i in {1,2,...,5}{% 1st line
         \begin{InnerPrizeBox}%
             \begin{ocg}{s\i-100}{s\i-100}{1}{\hyperlink{s\i-100}{100}}\end{ocg}
         \end{InnerPrizeBox}%
     }%
 
-    \foreach \i in {1,2,...,5}{%
+    \foreach \i in {1,2,...,5}{% 2nd line
         \begin{InnerPrizeBox}%
             \begin{ocg}{s\i-200}{s\i-200}{1}{\hyperlink{s\i-200}{200}}\end{ocg}
         \end{InnerPrizeBox}%
     }%
 
-    \foreach \i in {1,2,...,5}{%
+    \foreach \i in {1,2,...,5}{% 3rd line
         \begin{InnerPrizeBox}%
             \begin{ocg}{s\i-300}{s\i-300}{1}{\hyperlink{s\i-300}{300}}\end{ocg}
         \end{InnerPrizeBox}%
     }%
 
-    \foreach \i in {1,2,...,5}{%
+    \foreach \i in {1,2,...,5}{% 4th line
         \begin{InnerPrizeBox}%
             \begin{ocg}{s\i-400}{s\i-400}{1}{\hyperlink{s\i-400}{400}}\end{ocg}
         \end{InnerPrizeBox}%
     }%
 
-    \foreach \i in {1,2,...,5}{%
+    \foreach \i in {1,2,...,5}{% 5th line
         \begin{InnerPrizeBox}%
             \begin{ocg}{s\i-500}{s\i-500}{1}{\hyperlink{s\i-500}{500}}\end{ocg}
         \end{InnerPrizeBox}%
     }%
 }
 
-\newtcolorbox{QuestionHeadFoot}[1][]{
-    enhanced,
-    before=\vskip-.7ex,
-    after=,
-    arc=0pt,
-    width=\paperwidth,
-    boxrule=.4pt,
-    colframe=white,
-    center upper,
-    center lower,
-    interior style={
-        top color=blue,
-        bottom color=black
-    },
-    colupper=white,
-    collower=white,
-    valign=center,
-    fontupper=\LARGE\bfseries,
-    fontlower=\LARGE\bfseries,
-    height=.176\paperheight,
-    sidebyside,
-    segmentation style={white,solid,line width=.4pt},
-    #1
-}
-
-\newcommand{\header}[2]{
+% Command for setting up the header of a question
+\newcommand{\header}[2]{% Gets 2 arguments: row, i.e. category and column, i.e. price
     \begin{QuestionHeadFoot}
-        Subject #1 \tcblower #2
+        #1 \tcblower #2
     \end{QuestionHeadFoot}
 }
 
-\newcommand{\footer}[1]{
+% Command for setting up the footer of a question
+\newcommand{\footer}[1]{% 1 arg: Question/Answer ID ?
     \begin{QuestionHeadFoot}[before=\vskip-2.7ex]
         \hyperlink{question#1}{Question} \\ \hyperlink{answer#1}{Answer} \tcblower
         \hideocg{#1}{Done!} \\ \hyperlink{home}{Home}
     \end{QuestionHeadFoot}
 }
 
-\newcommand{\content}[4]{
+% Command for setting up the Question and the answer
+\newcommand{\content}[4]{% 4 args: 1-buttonlinks link 2-categorynumber 3-price 4-text
     \begin{frame}
         \hypertarget<1>{answer#1}{}
         \hypertarget<2>{question#1}{}
@@ -143,6 +163,7 @@
 }
 
 
+% Command for setting up the footer of a DOUBLE question
 \newcommand{\footerdouble}[1]{
     \begin{QuestionHeadFoot}[before=\vskip-2.7ex]
         \hyperlink{question#1}{\color{red}Question} \\
@@ -152,8 +173,8 @@
     \end{QuestionHeadFoot}
 }
 
-\newcommand{\contentdouble}[4]{
-%
+% Command for setting up the DOUBLE question and answer
+\newcommand{\contentdouble}[4]{%
 	{
     \begin{frame}
         \hypertarget<1>{double#1}{}
@@ -162,32 +183,33 @@
         \hypertarget{#1}{}
         \header{#2}{DOUBLE!!!!!}
         #4
-        
+
         \footerdouble{#1}
     \end{frame}
-}
-}
-
-\newtcolorbox{textarea}[1][]{
-    nobeforeafter,
-    height=6.2cm,
-    boxrule=0pt,
-    center upper,
-    valign=center,
-    #1
+  }
 }
 
+% Define the Categories here !!!!!!!
+\def \firstcat {\mbox{Who am I?}}
+\def \secondcat {Cat 2}
+\def \thirdcat {Cat 3}
+\def \fourthcat {Cat 4}
+\def \fifthcat {Cat 5}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
+
+% Set up the HOME slide
 \begin{frame}
     \hypertarget{home}{}
     \vspace*{-.5cm}
-    \subjects{Subject 1}{Subject 2}{Subject 3}{Subject 4}{Subject 5}
+    \subjects{\firstcat}{\secondcat}{\thirdcat}{\fourthcat}{\fifthcat}
     \prizes
 \end{frame}
 
 \content                       % 4 arguments
 {s1-100}                     % question internal identifier
-{1}                          % subject number
+{\firstcat}                          % category
 {100}{                       % question prize
     \begin{textarea}[]         % question/answer content
         \only<1>{                  % answer content
@@ -201,7 +223,7 @@
 
 \content                       % 4 arguments
 {s1-200}                     % question internal identifier
-{1}                          % subject number
+{\firstcat}                          % subject number
 {200}{                       % question prize
     \begin{textarea}[]         % question/answer content
         \only<1>{                  % answer content
@@ -229,7 +251,7 @@
 
 \contentdouble                       % 4 arguments
 {s1-300}                     % question internal identifier
-{1}                          % subject number
+{\firstcat}                          % subject number
 {300}{                       % question prize
     \begin{textarea}[]         % question/answer content
         \only<1>{
@@ -249,7 +271,7 @@
 
 \content                       % 4 arguments
 {s1-400}                     % question internal identifier
-{1}                          % subject number
+{\firstcat}                          % subject number
 {400}{                       % question prize
     \begin{textarea}[]         % question/answer content
         \only<1>{
@@ -261,4 +283,25 @@
         }
     \end{textarea}
 }
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Category 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\content                       % 4 arguments
+{s2-100}                     % question internal identifier
+{\secondcat}                          % subject number
+{400}{                       % question prize
+    \begin{textarea}[]         % question/answer content
+        \only<1>{
+        	    % answer content
+             Answer of Category $2$ for $100$
+        }
+        \only<2>{                  % question content
+            Question of Category $2$ for $100$ ?
+        }
+    \end{textarea}
+}
+
 \end{document}
