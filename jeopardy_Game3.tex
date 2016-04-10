@@ -1,0 +1,137 @@
+\documentclass{beamer}
+
+\usepackage{tcolorbox}
+\usepackage{ocgx}
+\usepackage{graphicx}
+% Use jeopardy specific commands
+\usepackage{commands}
+
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamersize{text margin left=0cm, text margin right=0cm}
+\tcbuselibrary{skins}
+
+% Define the Categories here !!!!!!!
+\def \firstcat {\mbox{\textbf{Who am}} \mbox{\textbf{I now?}}}
+\def \secondcat {Cat 2}
+\def \thirdcat {Cat 3}
+\def \fourthcat {Cat 4}
+\def \fifthcat {Cat 5}
+
+% Define the picture for the DOUBLE Bonus here !!!
+\def \doublepic {\includegraphics[scale=0.7]{jeopardypics/Double_Jeopardy.png}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Set up the HOME slide
+\begin{frame}
+    \hypertarget{home}{}
+    \vspace*{-.5cm}
+    \subjects{\firstcat}{\secondcat}{\thirdcat}{\fourthcat}{\fifthcat}
+    \prizes
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Category 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\content                       % 4 arguments
+{s1-100}                     % question internal identifier
+{\firstcat}                          % category
+{100}{                       % question prize
+    \begin{textarea}[]         % question/answer content
+        \only<1>{                  % answer content
+            $6.28318530$
+        }
+        \only<2>{                  % question content
+            What is $2\pi$ ?
+        }
+    \end{textarea}
+}
+
+\content                       % 4 arguments
+{s1-200}                     % question internal identifier
+{\firstcat}                          % subject number
+{200}{                       % question prize
+    \begin{textarea}[]         % question/answer content
+        \only<1>{                  % answer content
+         sdfsdfsdf
+        }
+        \only<2>{                  % question content
+            What is Karman Vortex Street ?
+        }
+    \end{textarea}
+}
+
+
+\contentdouble                       % 4 arguments
+{s1-300}                     % question internal identifier
+{\firstcat}                          % subject number
+{300}{                       % question prize
+    \begin{textarea}[]         % question/answer content
+        \only<1>{
+        		\doublepic
+        	}
+        \only<2>{                  % answer content
+            $\frac{1+\sqrt{5}}{2}$
+            test
+        }
+        \only<3>{                  % question content
+            What is the golden ratio?
+        }
+    \end{textarea}
+}
+
+
+
+\content                       % 4 arguments
+{s1-400}                     % question internal identifier
+{\firstcat}                          % subject number
+{400}{                       % question prize
+    \begin{textarea}[]         % question/answer content
+        \only<1>{
+        	    % answer content
+            $ 2.718281$
+        }
+        \only<2>{                  % question content
+            What is $e$ ?
+        }
+    \end{textarea}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Category 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\content                       % 4 arguments
+{s2-100}                     % question internal identifier
+{\secondcat}                          % subject number
+{400}{                       % question prize
+    \begin{textarea}[]         % question/answer content
+        \only<1>{
+        	    % answer content
+             Answer of Category $2$ for $100$
+        }
+        \only<2>{                  % question content
+            Question of Category $2$ for $100$ ?
+        }
+    \end{textarea}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Category 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Category 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Category 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
