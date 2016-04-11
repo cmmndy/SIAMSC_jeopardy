@@ -1,9 +1,17 @@
-\documentclass{beamer}
+% arara: pdflatex
+% arara: indent
+% arara: indent: {overwrite: yes}
+% arara: indent: {output: jeopardy_Game2.tex}
+% arara: indent: {silent: yes}
+% arara: indent: {trace: yes}
+% arara: indent: {localSettings: yes}
+% arara: indent: {onlyDefault: on}
+% arara: indent: { cruft: /home/camminady/.latexindent }
 
+\documentclass{beamer}
 \usepackage{tcolorbox}
 \usepackage{ocgx}
 \usepackage{graphicx}
-% Use jeopardy specific commands
 \usepackage{commands}
 
 
@@ -12,14 +20,14 @@
 \tcbuselibrary{skins}
 
 % Define the Categories here !!!!!!!
-\def \firstcat {\mbox{\textbf{Who am}} \mbox{\textbf{I now?}}}
-\def \secondcat {Cat 2}
-\def \thirdcat {Cat 3}
-\def \fourthcat {Cat 4}
-\def \fifthcat {Cat 5}
+\def \firstcat {\textbf{Space}}
+\def \secondcat {\textbf{Aachen}}
+\def \thirdcat {\textbf{Code}}
+\def \fourthcat {\textbf{The Force}}
+\def \fifthcat {\textbf{Numbers}}
 
 % Define the picture for the DOUBLE Bonus here !!!
-\def \doublepic {\includegraphics[scale=0.7]{jeopardypics/Double_Jeopardy.png}}
+\def \doublepic {\includegraphics[scale=0.7]{../jeopardypics/Double_Jeopardy.png}}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -39,89 +47,95 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Category 1
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\content                       % 4 arguments
-{s1-100}                     % question internal identifier
-{\firstcat}                          % category
-{100}{                       % question prize
-    \begin{textarea}[]         % question/answer content
-        \only<1>{                  % answer content
-            $6.28318530$
-        }
-        \only<2>{                  % question content
-            What is $2\pi$ ?
-        }
-    \end{textarea}
-}
-
-\content                       % 4 arguments
-{s1-200}                     % question internal identifier
-{\firstcat}                          % subject number
-{200}{                       % question prize
-    \begin{textarea}[]         % question/answer content
-        \only<1>{                  % answer content
-         sdfsdfsdf
-        }
-        \only<2>{                  % question content
-            What is Karman Vortex Street ?
-        }
-    \end{textarea}
+\content                       
+{s1-100}                     
+{\firstcat}                          
+{100}{    
+	\begin{textarea}[]
+		\only<1>{
+			After Armstrong, this man was the second person to walk on the moon.
+		}
+		\only<2>{
+			Who is Buzz Aldrin?
+		}
+	\end{textarea}   
 }
 
 
-\contentdouble                       % 4 arguments
-{s1-300}                     % question internal identifier
-{\firstcat}                          % subject number
-{300}{                       % question prize
-    \begin{textarea}[]         % question/answer content
-        \only<1>{
-        		\doublepic
-        	}
-        \only<2>{                  % answer content
-            $\frac{1+\sqrt{5}}{2}$
-            test
-        }
-        \only<3>{                  % question content
-            What is the golden ratio?
-        }
-    \end{textarea}
+\content                       
+{s1-200}                     
+{\firstcat}                          
+{200}{    
+	\begin{textarea}[]
+		\only<1>{
+			\begin{columns}[c]
+				\column{.3\textwidth}
+				\includegraphics[height=1.0\linewidth]{../categories/media/space/laika.jpg}
+				\column{.3\textwidth}	
+				This soviet dog became one of the first animals in space.
+			\end{columns}
+			
+		}
+		\only<2>{
+			Who is Laika?
+		}
+	\end{textarea}           
 }
 
 
+\content           
+{s1-300}                     
+{\firstcat}                          
+{300}{                       
+	\begin{textarea}[]
+		\only<1>{
+			\begin{columns}[c]
+				\column{.3\textwidth}
+				\includegraphics[height=.7\linewidth]{../categories/media/space/selfie.jpg}
+				\column{.3\textwidth}	
+				It took quite some effort to take a selfie of this guy.
+			\end{columns}
+		}
+		\only<2>{
+			What is the Curiosity Rover?
+		}
+	\end{textarea}
+}
 
-\content                       % 4 arguments
-{s1-400}                     % question internal identifier
-{\firstcat}                          % subject number
-{400}{                       % question prize
-    \begin{textarea}[]         % question/answer content
-        \only<1>{
-        	    % answer content
-            $ 2.718281$
-        }
-        \only<2>{                  % question content
-            What is $e$ ?
-        }
-    \end{textarea}
+
+\content                       
+{s1-400}                     
+{\firstcat}                          
+{400}{    
+	\begin{textarea}[]
+		\only<1>{
+			In 2003, this space shuttle reentry ended in a disaster due to parts of the insulation breaking off.
+		}
+		\only<2>{
+			What is the Space Shuttle Columbia?
+		}
+	\end{textarea}   
+}
+
+
+\content                       
+{s1-500}                     
+{\firstcat}                          
+{500}{    
+	\begin{textarea}[]
+		\only<1>{
+			Founded by the Tesla Motors CEO, this company achieved the first vertical landing of a first stage.
+		}
+		\only<2>{
+			What is SpaceX?
+		}
+	\end{textarea}
 }
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Category 2
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\content                       % 4 arguments
-{s2-100}                     % question internal identifier
-{\secondcat}                          % subject number
-{400}{                       % question prize
-    \begin{textarea}[]         % question/answer content
-        \only<1>{
-        	    % answer content
-             Answer of Category $2$ for $100$
-        }
-        \only<2>{                  % question content
-            Question of Category $2$ for $100$ ?
-        }
-    \end{textarea}
-}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Category 2
