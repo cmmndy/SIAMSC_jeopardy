@@ -1,9 +1,17 @@
-\documentclass{beamer}
+% arara: pdflatex
+% arara: indent
+% arara: indent: {overwrite: yes}
+% arara: indent: {output: jeopardy_Game2.tex}
+% arara: indent: {silent: yes}
+% arara: indent: {trace: yes}
+% arara: indent: {localSettings: yes}
+% arara: indent: {onlyDefault: on}
+% arara: indent: { cruft: /home/camminady/.latexindent }
 
+\documentclass{beamer}
 \usepackage{tcolorbox}
 \usepackage{ocgx}
 \usepackage{graphicx}
-% Use jeopardy specific commands
 \usepackage{commands}
 
 
@@ -12,126 +20,216 @@
 \tcbuselibrary{skins}
 
 % Define the Categories here !!!!!!!
-\def \firstcat {\mbox{\textbf{Who am}} \mbox{\textbf{I now?}}}
-\def \secondcat {Cat 2}
-\def \thirdcat {Cat 3}
-\def \fourthcat {Cat 4}
-\def \fifthcat {Cat 5}
+\def \firstcat {\textbf{Space}}
+\def \secondcat {\textbf{Aachen}}
+\def \thirdcat {\textbf{Code}}
+\def \fourthcat {\textbf{The Force}}
+\def \fifthcat {\textbf{Numbers}}
 
 % Define the picture for the DOUBLE Bonus here !!!
-\def \doublepic {\includegraphics[scale=0.7]{jeopardypics/Double_Jeopardy.png}}
+\def \doublepic {\includegraphics[scale=0.7]{../jeopardypics/Double_Jeopardy.png}}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% Set up the HOME slide
-\begin{frame}
-    \hypertarget{home}{}
-    \vspace*{-.5cm}
-    \subjects{\firstcat}{\secondcat}{\thirdcat}{\fourthcat}{\fifthcat}
-    \prizes
-\end{frame}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Category 1
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\content                       % 4 arguments
-{s1-100}                     % question internal identifier
-{\firstcat}                          % category
-{100}{                       % question prize
-    \begin{textarea}[]         % question/answer content
-        \only<1>{                  % answer content
-            $6.28318530$
-        }
-        \only<2>{                  % question content
-            What is $2\pi$ ?
-        }
-    \end{textarea}
-}
-
-\content                       % 4 arguments
-{s1-200}                     % question internal identifier
-{\firstcat}                          % subject number
-{200}{                       % question prize
-    \begin{textarea}[]         % question/answer content
-        \only<1>{                  % answer content
-         sdfsdfsdf
-        }
-        \only<2>{                  % question content
-            What is Karman Vortex Street ?
-        }
-    \end{textarea}
-}
-
-
-\contentdouble                       % 4 arguments
-{s1-300}                     % question internal identifier
-{\firstcat}                          % subject number
-{300}{                       % question prize
-    \begin{textarea}[]         % question/answer content
-        \only<1>{
-        		\doublepic
-        	}
-        \only<2>{                  % answer content
-            $\frac{1+\sqrt{5}}{2}$
-            test
-        }
-        \only<3>{                  % question content
-            What is the golden ratio?
-        }
-    \end{textarea}
-}
-
-
-
-\content                       % 4 arguments
-{s1-400}                     % question internal identifier
-{\firstcat}                          % subject number
-{400}{                       % question prize
-    \begin{textarea}[]         % question/answer content
-        \only<1>{
-        	    % answer content
-            $ 2.718281$
-        }
-        \only<2>{                  % question content
-            What is $e$ ?
-        }
-    \end{textarea}
-}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Category 2
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\content                       % 4 arguments
-{s2-100}                     % question internal identifier
-{\secondcat}                          % subject number
-{400}{                       % question prize
-    \begin{textarea}[]         % question/answer content
-        \only<1>{
-        	    % answer content
-             Answer of Category $2$ for $100$
-        }
-        \only<2>{                  % question content
-            Question of Category $2$ for $100$ ?
-        }
-    \end{textarea}
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Category 2
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Category 2
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Category 2
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	% Set up the HOME slide
+	\begin{frame}
+		\hypertarget{home}{}
+		\vspace*{-.5cm}
+		\subjects{\firstcat}{\secondcat}{\thirdcat}{\fourthcat}{\fifthcat}
+		\prizes
+	\end{frame}
+	
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	% Category 1
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\content                       
+	{s1-100}                     
+	{\firstcat}                          
+	{100}{      
+	}
+	
+	
+	\content                       
+	{s1-200}                     
+	{\firstcat}                          
+	{200}{             
+	}
+	
+	
+	\content           
+	{s1-300}                     
+	{\firstcat}                          
+	{300}{                       
+	}
+	
+	
+	\content                       
+	{s1-400}                     
+	{\firstcat}                          
+	{400}{     
+	}
+	
+	
+	\content                       
+	{s1-500}                     
+	{\firstcat}                          
+	{500}{    
+	}
+	
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	% Category 2
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\content                       
+	{s2-100}                     
+	{\firstcat}                          
+	{100}{    
+	}
+	
+	
+	\content                       
+	{s2-200}                     
+	{\firstcat}                          
+	{200}{             
+	}
+	
+	
+	\content           
+	{s2-300}                     
+	{\firstcat}                          
+	{300}{                       
+	}
+	
+	
+	\content                       
+	{s2-400}                     
+	{\firstcat}                          
+	{400}{       
+	}
+	
+	
+	\content                       
+	{s2-500}                     
+	{\firstcat}                          
+	{500}{    
+	}
+	
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	% Category 3
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\content                       
+	{s3-100}                     
+	{\firstcat}                          
+	{100}{    
+	}
+	
+	
+	\content                       
+	{s3-200}                     
+	{\firstcat}                          
+	{200}{             
+	}
+	
+	
+	\content           
+	{s3-300}                     
+	{\firstcat}                          
+	{300}{                       
+	}
+	
+	
+	\content                       
+	{s3-400}                     
+	{\firstcat}                          
+	{400}{       
+	}
+	
+	
+	\content                       
+	{s3-500}                     
+	{\firstcat}                          
+	{500}{    
+	}
+	
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	% Category 4
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\content                       
+	{s4-100}                     
+	{\firstcat}                          
+	{100}{    
+	}
+	
+	
+	\content                       
+	{s4-200}                     
+	{\firstcat}                          
+	{200}{             
+	}
+	
+	
+	\content           
+	{s4-300}                     
+	{\firstcat}                          
+	{300}{                       
+	}
+	
+	
+	\content                       
+	{s4-400}                     
+	{\firstcat}                          
+	{400}{       
+	}
+	
+	
+	\content                       
+	{s4-500}                     
+	{\firstcat}                          
+	{500}{    
+	}
+	
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	% Category 5
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\content                       
+	{s5-100}                     
+	{\firstcat}                          
+	{100}{    
+	}
+	
+	
+	\content                       
+	{s5-200}                     
+	{\firstcat}                          
+	{200}{             
+	}
+	
+	
+	\content           
+	{s5-300}                     
+	{\firstcat}                          
+	{300}{                       
+	}
+	
+	
+	\content                       
+	{s5-400}                     
+	{\firstcat}                          
+	{400}{       
+	}
+	
+	
+	\content                       
+	{s5-500}                     
+	{\firstcat}                          
+	{500}{    
+	}
 \end{document}
