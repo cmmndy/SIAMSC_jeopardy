@@ -5,11 +5,11 @@ informatik
 F	computerscience
 3	SE
 F	versionnumber
-	helloworld
+1	helloworld
 
 mathe
-	numbers
-	plots
+2	numbers
+3	plots
 
 science
 1	units
@@ -36,3 +36,10 @@ sontiges
 F	if you put it
 
 
+
+
+
+1 Jonas
+2 Thomas
+3 Steffi
+F Steffi
