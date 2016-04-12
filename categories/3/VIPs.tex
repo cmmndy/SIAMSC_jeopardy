@@ -45,9 +45,12 @@
 }
 
 \def \ed
-{
+{ %% double
 \begin{textarea}[]
   \only<1>{
+    \doublepic
+  }
+  \only<2>{
   	 \begin{columns}[c]
   	 	\column{.5\textwidth}
     \includegraphics[height=1\linewidth]{../categories/media/vips/Strang8}
@@ -57,7 +60,7 @@
   	 	He was here once.
   	 \end{columns}
   }
-  \only<2>{
+  \only<3>{
     Who is Gilbert Strang?
   }
 \end{textarea}
