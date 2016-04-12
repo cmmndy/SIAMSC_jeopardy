@@ -1,13 +1,3 @@
-% arara: pdflatex
-% arara: indent
-% arara: indent: {overwrite: yes}
-% arara: indent: {output: jeopardy_Game2.tex}
-% arara: indent: {silent: yes}
-% arara: indent: {trace: yes}
-% arara: indent: {localSettings: yes}
-% arara: indent: {onlyDefault: on}
-% arara: indent: { cruft: /home/camminady/.latexindent }
-
 \documentclass{beamer}
 \usepackage{tcolorbox}
 \usepackage{ocgx}
@@ -21,11 +11,16 @@
 \tcbuselibrary{skins}
 
 % Define the Categories here !!!!!!!
-\def \firstcat {\textbf{Space}}
-\def \secondcat {\textbf{Aachen}}
-\def \thirdcat {\textbf{Code}}
-\def \fourthcat {\textbf{The Force}}
-\def \fifthcat {\textbf{Numbers}}
+\def \firstcat {\textbf{Code}}
+\def \secondcat {\textbf{Companies}}
+\def \thirdcat {\textbf{\textbf{Hello}\\ \textbf{World}}}
+\def \fourthcat {\textbf{Video Games}}
+\def \fifthcat {\textbf{Units}}
+\input{../categories/1/code1.tex}
+\input{../categories/1/companies.tex}
+\input{../categories/1/HelloWorld.tex}
+\input{../categories/1/videoGames1.tex}
+\input{../categories/1/units.tex}
 
 % Define the picture for the DOUBLE Bonus here !!!
 \def \doublepic {\includegraphics[scale=0.7]{../jeopardypics/Double_Jeopardy.png}}
@@ -35,7 +30,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	
+
 	% Set up the HOME slide
 	\begin{frame}
 		\hypertarget{home}{}
@@ -43,219 +38,219 @@
 		\subjects{\firstcat}{\secondcat}{\thirdcat}{\fourthcat}{\fifthcat}
 		\prizes
 	\end{frame}
-	
-	
+
+
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	% Category 1
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	\content                       
-	{s1-100}                     
-	{\firstcat}                          
-	{100}{    
- 
+	\content
+	{s1-100}
+	{\firstcat}
+	{100}{
+    \aa
 	}
-	
-	
-	\content                       
-	{s1-200}                     
-	{\firstcat}                          
-	{200}{    
-		
+
+
+	\content
+	{s1-200}
+	{\firstcat}
+	{200}{
+    \ab
 	}
-	
-	
-	\content           
-	{s1-300}                     
-	{\firstcat}                          
-	{300}{                       
-	
+
+
+	\content
+	{s1-300}
+	{\firstcat}
+	{300}{
+    \ac
 	}
-	
-	
-	\content                       
-	{s1-400}                     
-	{\firstcat}                          
-	{400}{    
-	   
+
+
+	\content
+	{s1-400}
+	{\firstcat}
+	{400}{
+    \ad
 	}
-	
-	
-	\content                       
-	{s1-500}                     
-	{\firstcat}                          
-	{500}{    
-	
+
+
+	\content
+	{s1-500}
+	{\firstcat}
+	{500}{
+    \ae
 	}
-	
-	
+
+
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	% Category 2
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	\content                       
-	{s2-100}                     
-	{\secondcat}                          
-	{100}{    
+	\content
+	{s2-100}
+	{\secondcat}
+	{100}{
+    \ba
+	}
 
-	}
-	
-	
-	\content                       
-	{s2-200}                     
-	{\secondcat}                          
-	{200}{     
-	      
-	}
-	
-	
-	\content           
-	{s2-300}                     
-	{\secondcat}                          
-	{300}{   
-                   
-	}
-	
-	
-	\content                       
-	{s2-400}                     
-	{\secondcat}                          
-	{400}{     
- 
-	}
-	
-	
-	\content                       
-	{s2-500}                     
-	{\secondcat}                          
-	{500}{   
 
+	\content
+	{s2-200}
+	{\secondcat}
+	{200}{
+    \bb
 	}
-	
-	
+
+
+	\content
+	{s2-300}
+	{\secondcat}
+	{300}{
+    \bc
+	}
+
+
+	\content
+	{s2-400}
+	{\secondcat}
+	{400}{
+    \bd
+	}
+
+
+	\content
+	{s2-500}
+	{\secondcat}
+	{500}{
+    \be
+	}
+
+
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	% Category 3
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	\content                       
-	{s3-100}                     
-	{\thirdcat}                          
-	{100}{    
+	\content
+	{s3-100}
+	{\thirdcat}
+	{100}{
+    \ca
+	}
 
-	}
-	
-	
-	\content                       
-	{s3-200}                     
-	{\thirdcat}                          
-	{200}{     
-		       
-	}
-	
-	
-	\content           
-	{s3-300}                     
-	{\thirdcat}                          
-	{300}{    
-                  
-	}
-	
-	
-	\content                       
-	{s3-400}                     
-	{\thirdcat}                          
-	{400}{     
- 
-	}
-	
-	
-	\content                       
-	{s3-500}                     
-	{\thirdcat}                          
-	{500}{  
 
+	\content
+	{s3-200}
+	{\thirdcat}
+	{200}{
+    \cb
 	}
-	
-	
+
+
+	\content
+	{s3-300}
+	{\thirdcat}
+	{300}{
+    \cc
+	}
+
+
+	\content
+	{s3-400}
+	{\thirdcat}
+	{400}{
+    \cd
+	}
+
+
+	\content
+	{s3-500}
+	{\thirdcat}
+	{500}{
+    \ce
+	}
+
+
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	% Category 4
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	\content                       
-	{s4-100}                     
-	{\fourthcat}                          
-	{100}{    
+	\content
+	{s4-100}
+	{\fourthcat}
+	{100}{
+    \da
+	}
 
+
+	\content
+	{s4-200}
+	{\fourthcat}
+	{200}{
+    \db
 	}
-	
-	
-	\content                       
-	{s4-200}                     
-	{\fourthcat}                          
-	{200}{        
-	    
+
+
+	\content
+	{s4-300}
+	{\fourthcat}
+	{300}{
+    \dc
 	}
-	
-	
-	\content           
-	{s4-300}                     
-	{\fourthcat}                          
-	{300}{    
-	                  
+
+
+	\content
+	{s4-400}
+	{\fourthcat}
+	{400}{
+    \dd
 	}
-	
-	
-	\content                       
-	{s4-400}                     
-	{\fourthcat}                          
-	{400}{    
-	  
+
+
+	\content
+	{s4-500}
+	{\fourthcat}
+	{500}{
+    \de
 	}
-	
-	
-	\content                       
-	{s4-500}                     
-	{\fourthcat}                          
-	{500}{    
-	  
-	}
-	
-	
+
+
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	% Category 5
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	\content                       
-	{s5-100}                     
-	{\fifthcat}                          
-	{100}{ 
-	  
+	\content
+	{s5-100}
+	{\fifthcat}
+	{100}{
+    \ea
 	}
-	
-	
-	\content                       
-	{s5-200}                     
-	{\fifthcat}                          
-	{200}{   
-	
-		}
-	
-	
-	\content           
-	{s5-300}                     
-	{\fifthcat}                          
-	{300}{     
-	
-		}
-	
-	
-	\content                       
-	{s5-400}                     
-	{\fifthcat}                          
-	{400}{ 
-	     
-	}
-	
-	
-	\content                       
-	{s5-500}                     
-	{\fifthcat}                          
-	{500}{   
 
+
+	\content
+	{s5-200}
+	{\fifthcat}
+	{200}{
+    \eb
+	}
+
+
+	\content
+	{s5-300}
+	{\fifthcat}
+	{300}{
+    \ec
+	}
+
+
+	\content
+	{s5-400}
+	{\fifthcat}
+	{400}{
+    \ed
+	}
+
+
+	\content
+	{s5-500}
+	{\fifthcat}
+	{500}{
+    \ee
 	}
 \end{document}
