@@ -8,3 +8,5 @@
 *.toc
 *.txss
 *.bak*
+*.fdb_latexmk
+*.fls
