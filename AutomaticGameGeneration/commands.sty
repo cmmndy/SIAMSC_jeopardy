@@ -158,26 +158,72 @@
 }
 
 
-% % Command for setting up the footer of a DOUBLE question
-% \newcommand{\footerdouble}[1]{
-%     \begin{QuestionHeadFoot}[before=\vskip-2.7ex]
-%         \hyperlink{question#1}{Solution} %\\        \hyperlink{answer#1}{\color{green}Answer}
-%         \tcblower
-%         \hideocg{#1}{Done!} \\ \hyperlink{home}{Home}
-%     \end{QuestionHeadFoot}
-% }
 
 % Command for setting up the DOUBLE question and answer
 \newcommand{\contentdouble}[4]{%
 	{
-    \begin{frame}
-        \hypertarget{\doublepic}{}{}
+
+	\begin{frame}
         \hypertarget<1>{answer#1}{}
         \hypertarget<2>{question#1}{}
         \hypertarget{#1}{}
         \header{#2}{DOUBLE! #3}
-        #4
+        {\begin{textarea}[]
+        	\only<1>{
+        		\doublepic
+        	}
+        	\only<2>{
+        		How much do you want to bet?
+        	}
+        \end{textarea}
+	    }
         \footer{#1}
     \end{frame}
+    
+    	\begin{frame}
+    		\hypertarget<1>{answer#1}{}
+    		\hypertarget<2>{question#1}{}
+    		\hypertarget{#1}{}
+    		\header{#2}{DOUBLE! #3}
+    		#4
+    		\footer{#1}
+    	\end{frame}
   }
 }
+
+
+
+\newcommand{\CreateCat}[8]{
+	\input{#6}
+	#1
+	{s#7-100}
+	{#8}
+	{100}{
+		\Qa
+	}
+	#2
+	{s#7-200}
+	{#8}
+	{200}{
+		\Qb
+	}
+	#3
+	{s#7-300}
+	{#8}
+	{300}{
+		\Qc
+	}
+	#4
+	{s#7-400}
+	{#8}
+	{400}{
+		\Qd
+	}
+	#5
+	{s#7-500}
+	{#8}
+	{500}{
+		\Qe
+	}	
+}
+
