@@ -146,7 +146,7 @@
 }
 
 % Command for setting up the question and answer content
-\newcommand{\content}[4]{% 4 args: 1-ocg content id 2-category 3-price 4-text
+\newcommand{\single}[4]{% 4 args: 1-ocg content id 2-category 3-price 4-text
     \begin{frame}
         \hypertarget<1>{answer#1}{}
         \hypertarget<2>{question#1}{}
@@ -160,7 +160,7 @@
 
 
 % Command for setting up the DOUBLE question and answer
-\newcommand{\contentdouble}[4]{%
+\newcommand{\double}[4]{%
 	{
 
 	\begin{frame}
