@@ -11,6 +11,9 @@ Scales: micro, nano etc
 Name Roman numerals MMIX, CMXCIX, XLVIII, DCXVII, MDCLXVI ...
 
 
+SI Units named by Scientists (-> See categories/media/SIunits/)
+
+
 Math: What number is 1012 in the US but 1018 in the UK? 
 Physics: Who is the only woman with 2 Nobel Prizes, one in chemistry and one in physics?  
 Physics: On the electromagnetic spectrum, what type of radiation has the shortest wavelength?
