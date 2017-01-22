@@ -60,3 +60,7 @@ ALL: What have these things in common:
   - lin.Alg. Packages (Eigen, boost, linPack, Petsc, Armadillo)
   - Säugetiere
   - Milleniumsprobleme
+
+ALL: - Warnings
+     - Messed up pointers -> What is the output?
+     - What will go wrong -> Fehlermeldungen
