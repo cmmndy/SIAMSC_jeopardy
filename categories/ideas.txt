@@ -64,3 +64,6 @@ ALL: What have these things in common:
 ALL: - Warnings
      - Messed up pointers -> What is the output?
      - What will go wrong -> Fehlermeldungen
+     - What VIM command do you see (e.g. :wq)
+     - What Windows command (ctrl-a ctrl-v )
+
