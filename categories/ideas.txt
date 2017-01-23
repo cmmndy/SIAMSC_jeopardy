@@ -31,15 +31,9 @@ T: Name video game characters from prictures
   see https://www.sporcle.com/games/teedslaststand/video-game-rainbow
 
 S: Computers, real and fictional:
-  Military supercomputer from 1983's WarGames*
-  IBM computer that defeated chess champion Garry Kasparov in 1997
-  Virtual reality simulator for pacification of humans in a 1999 scifi flick
-  Robot-controlling supercomputer in the 2004 adaptation of I, Robot
-  IBM computer that competed on Jeopardy in February 2011
-  Antagonist of the video game Portal
-  1946 computer designed to calculate artillery firing tables for the United States Army's Ballistic Research Laboratory
-  Computer that gave the answer '42' in The Hitchhiker's Guide to the Galaxy
-  2001: A Space Odyssey antagonist
+  Robot-controlling supercomputer in the 2004 adaptation of I, Robot (?)
+  Antagonist of the video game Portal (GLaDOS, Genetic Lifeform and Disk Operating System)
+  1946 computer designed to calculate artillery firing tables for the United States Army's Ballistic Research Laboratory (ENIAC, Electronic Numerical Integrator and Computer)
 
 
 ALL: Lyrics:
