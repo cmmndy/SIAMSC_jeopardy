@@ -1,7 +1,5 @@
 T: Famous invertors by image (see categories/media/famousinvertors), add the invention!
 
-S: SI Units named by Scientists (-> See categories/media/SIunits/)
-
 Number:
    What is 21 in binary?...
    What is 21 in HexaDecimal?
