@@ -31,13 +31,14 @@ T: Name video game characters from prictures
   see https://www.sporcle.com/games/teedslaststand/video-game-rainbow
 
 S: Computers, real and fictional:
+  -> 2 Categories have been added, these ideas are left for another one.
   Robot-controlling supercomputer in the 2004 adaptation of I, Robot (?)
   Antagonist of the video game Portal (GLaDOS, Genetic Lifeform and Disk Operating System)
   1946 computer designed to calculate artillery firing tables for the United States Army's Ballistic Research Laboratory (ENIAC, Electronic Numerical Integrator and Computer)
 
 
 ALL: Lyrics:
-  - I got 23 problems, but a bitch ain't one. Who is David Hilbert?
+  - I got 23 problems but a bitch ain't one. Who is David Hilbert?
 
 ALL: What have these things in common:
   - Nobelpreisträger
@@ -54,8 +55,30 @@ ALL: What have these things in common:
   - Milleniumsprobleme
 
 ALL: - Warnings
+        -> "Overfull \hbox" (LaTeX)
+        -> "non-blank characters beyond column 72 ignored" (Fortran)
+        -> "constant truncated - precision too great" (Fortran)
+        ->http://docs.embarcadero.com/products/rad_studio/radstudio2007/RS2007_helpupdates/HUpdate4/EN/html/devwin32/cppcompmessagespart_xml.html
+        C++: "W8012: Comparing signed and unsigned values"
+          Since the ranges of signed and unsigned types are different the result of an ordered comparison of an unsigned and a signed value might have an unexpected result.
+          Example:
+          #pragma warn +csu
+          boolfoo(unsigned u, int i)
+          {
+          return u < i;
+          }
+        -> C++: W8019: "Code has no effect"
+            This warning is issued when the compiler encounters a statement with some operators that have no effect.
+              For example, the statement
+              a + b;
+              has no effect on either variable.
+
+
+
+
      - Messed up pointers -> What is the output?
      - What will go wrong -> Fehlermeldungen
      - What VIM command do you see (e.g. :wq)
      - What Windows command (ctrl-a ctrl-v )
      - Which molecule am I ? Pictures
+     - What is the compiler flag for ... (e.g. suppress warnings, treat warnings as errors, debugging...)
