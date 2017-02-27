@@ -1,0 +1,53 @@
+\documentclass{beamer}
+\usepackage{tcolorbox}
+\usepackage{ocgx}
+\usepackage{graphicx}
+\usepackage{commands}
+\usepackage{algorithm,algorithmic}
+\usepackage{animate}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamersize{text margin left=0cm, text margin right=0cm}
+\tcbuselibrary{skins}
+
+% Define the Categories here !!!!!!!
+\def \firstcat {\textbf{Scales}}
+\def \secondcat {\textbf{Templates}}
+\def \thirdcat {\textbf{When was what?}}
+\def \fourthcat {\textbf{??}}
+\def \fifthcat {\textbf{??}}
+
+
+% Define the picture for the DOUBLE Bonus here !!!
+\def \doublepic {\includegraphics[scale=0.7]{../categories/media/jeopardypics/Double_Jeopardy.png}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Set up the HOME slide
+\begin{frame}
+    \hypertarget{home}{}
+    \vspace*{-.5cm}
+    \subjects{\firstcat}{\secondcat}{\thirdcat}{\fourthcat}{\fifthcat}
+    \prizes
+\end{frame}
+
+% Usage of CreateCat
+% 	first five arguments specify, whether it is single or double
+% 	sixth argument is the path of the .tex file with the question
+% 	seventh argument is the number of the categorie
+% 	eigth argument is the corresponding tag
+
+	\CreateCat{\single}{\double}{\single}{\single}{\double}{../categories/scales.tex}{1}{\firstcat}
+	\CreateCat{\single}{\single}{\single}{\single}{\double}{../categories/template.tex}{2}{\secondcat}
+	\CreateCat{\single}{\double}{\single}{\single}{\double}{../categories/whenwaswhat.tex}{3}{\thirdcat}
+	% \CreateCat{\single}{\single}{\single}{\single}{\double}{../categories/whenwaswhat.tex}{4}{\fourthcat}
+	% \CreateCat{\single}{\single}{\double}{\single}{\double}{../categories/whenwaswhat.tex}{5}{\fifthcat}
+
+
+
+
+\end{document}
