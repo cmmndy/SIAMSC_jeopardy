@@ -1,17 +1,3 @@
-T: Famous invertors by image (see categories/media/famousinvertors), add the invention!
-
-
-   What is 21 in binary?...
-   What is 21 in HexaDecimal?
-   Name Roman numerals MMIX, CMXCIX, XLVIII, DCXVII, MDCLXVI ...
-
-
-J: Find elements from the periodic table from abbreviation.
-
-J: Scales: micro, nano, mega, giga etc
-J: Scales of famous things (cells, distance moon earth)
-
-
 Math: What number is 1012 in the US but 1018 in the UK?
 Physics: Who is the only woman with 2 Nobel Prizes, one in chemistry and one in physics?
 Physics: On the electromagnetic spectrum, what type of radiation has the shortest wavelength?
@@ -26,16 +12,6 @@ S: 90s computer games by picture:
   worms
   half live
   doom
-
-T: Name video game characters from prictures
-  see https://www.sporcle.com/games/teedslaststand/video-game-rainbow
-
-S: Computers, real and fictional:
-  -> 2 Categories have been added, these ideas are left for another one.
-  Robot-controlling supercomputer in the 2004 adaptation of I, Robot (?)
-  Antagonist of the video game Portal (GLaDOS, Genetic Lifeform and Disk Operating System)
-  1946 computer designed to calculate artillery firing tables for the United States Army's Ballistic Research Laboratory (ENIAC, Electronic Numerical Integrator and Computer)
-
 
 ALL: Lyrics:
   - I got 23 problems but a bitch ain't one. Who is David Hilbert?
@@ -72,13 +48,4 @@ ALL: - Warnings
               For example, the statement
               a + b;
               has no effect on either variable.
-
-
-
-
-     - Messed up pointers -> What is the output?
-     - What will go wrong -> Fehlermeldungen
-     - What VIM command do you see (e.g. :wq)
-     - What Windows command (ctrl-a ctrl-v )
-     - Which molecule am I ? Pictures
-     - What is the compiler flag for ... (e.g. suppress warnings, treat warnings as errors, debugging...)
+        - What is the compiler flag for ... (e.g. suppress warnings, treat warnings as errors, debugging...)
